@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			return;
 		}
 
+
+		if(isProductIDUnique(productID)) {
 		const product = {
 			productName: productName,
 			productID: productID,
@@ -47,8 +49,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		productList.appendChild(productInfo);
 
 		form.reset();
+	} else {
+		alert('Product ID must be unique');
+	}
 
 	});
+
+	function isProductIDUnique(id) {
+		return !storedProducts.some(product => product.productID === id);
+	}
 
 	//Function for creating registered product element
 	function createProductInfoElement(product) {
