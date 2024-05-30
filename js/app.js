@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	//display stored products
 	function displayStoredProducts() {
 		storedProducts.forEach(function(product) {
-			const productInfo = createProductInfoElemen(product);
+			const productInfo = createProductInfoElement(product);
 			productList.appendChild(productInfo);
 		});
 	}
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		const productInfo = createProductInfoElement(product);
 		productList.appendChild(productInfo);
 
-		forn.reset();
+		form.reset();
 
 	});
 
